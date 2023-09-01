@@ -1,0 +1,191 @@
+.table-container {
+  width: 90%;
+  max-width: 69.375rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+  table {
+    width: 100%;
+    thead {
+      background-color: var(--clr-accent-400);
+      color: var(--clr-white);
+      tr {
+        th {
+          padding: 0.5rem;
+        }
+      }
+    }
+    tbody {
+      tr:nth-child(even) {
+        background-color: var(--clr-grey);
+      }
+      tr {
+        background-color: var(--clr-white);
+        cursor: pointer;
+        transition: scale 100ms linear;
+        &:hover {
+          scale: 1.01;
+          opacity: 0.8;
+        }
+
+        td {
+          padding: 0.2rem 0.5rem;
+          .icons-box {
+            width: 100%;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            &_icon {
+              padding: 0.2rem;
+              border-radius: 0.3rem;
+
+              &:hover {
+                background-color: var(--clr-accent-600);
+                color: var(--clr-white);
+              }
+              &:active {
+                background-color: var(--clr-accent-800);
+                color: var(--clr-white);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 69.375rem;
+  margin: 1rem auto 0;
+
+  .date-filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    &_dates {
+      display: flex;
+      max-width: 30rem;
+      gap: 0.2rem;
+      .date-container {
+        width: 50%;
+        label {
+          font-size: 14px;
+        }
+        input {
+          width: 100%;
+          padding: 0.2rem;
+          border-style: none;
+          border-radius: 0.2rem;
+          font-family: var(--ff-primary);
+        }
+      }
+    }
+  }
+
+  button {
+    height: fit-content;
+    margin-top: auto;
+    padding: 0.5rem;
+    border-style: none;
+    border-radius: 0.2rem;
+    background-color: var(--clr-accent-400);
+    color: var(--clr-white);
+    &:hover {
+      background-color: var(--clr-accent-600);
+    }
+    &:active {
+      background-color: var(--clr-accent-800);
+    }
+    &.disabled {
+      filter: grayscale(1);
+    }
+  }
+}
+
+.controls-container {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+::ng-deep pagination-controls.upper .ngx-pagination {
+  width: fix-content;
+  margin: 1rem auto 0;
+}
+
+.product-detail-container {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #00000034;
+  &_panel {
+    position: relative;
+    height: 100%;
+    width: 25%;
+    padding: 5rem 1.5rem;
+    background-color: var(--clr-light);
+    .close-icon {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      color: var(--clr-grey);
+      cursor: pointer;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      h1 {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.product-create-container,
+.product-edit-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #00000034;
+  &_form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: fit-content;
+    width: 95%;
+    max-width: 40rem;
+    padding: 3rem 1.5rem 0.5rem;
+    background-color: var(--clr-light);
+    border-radius: 0.2rem 0.2rem 0 0;
+    .close-icon {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      color: var(--clr-grey);
+      cursor: pointer;
+    }
+    &_input-container {
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        border-style: none;
+        border-radius: 0.2rem;
+        font-family: var(--ff-primary);
+      }
+    }
+  }
+}

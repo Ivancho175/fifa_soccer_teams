@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+Code+Latin:wght@400;600&family=Raleway:wght@300;400;600;700&display=swap");
+:root {
+  --ff-primary: "Raleway", sans-serif;
+
+  --clr-light: #cfdae5;
+  --clr-grey: #aeb8c2;
+  --clr-dark: #0a121a;
+  --clr-white: #c6dff7;
+
+  --clr-accent-400: #4e86c3;
+  --clr-accent-600: #4374a8;
+  --clr-accent-800: #39638f;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--clr-light);
+}
+
+.send-button {
+  width: 100%;
+  padding: 0.5rem;
+  border-style: none;
+  border-radius: 0.2rem;
+  background-color: var(--clr-accent-400);
+  color: var(--clr-white);
+  &:hover {
+    background-color: var(--clr-accent-600);
+  }
+  &:active {
+    background-color: var(--clr-accent-800);
+  }
+  &.disabled {
+    filter: grayscale(1);
+  }
+}
